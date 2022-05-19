@@ -43,7 +43,7 @@ def filtering(arr):
 filtering(names)
 
 
-def run():
+def grabInfo():
     i = 0
     while i < len(urlList)-1:
         name = urlList[i][0]
@@ -85,7 +85,8 @@ def run():
                 categories.push('None')
             dets.append(Squish(urlList[i-1], desc, img, final_sizes, categories))
 
-run()
+grabInfo()
 
+#grabbing the formatted info for placement into db
 for det in dets:
     print([det.name,det.desc,det.img, det.sizes, det.categories], ",")
